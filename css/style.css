@@ -1,0 +1,100 @@
+@charset "utf-8";
+/*
+pangc制作
+*/
+/* reset */
+body,div,h1,h2,p,ul,input{ margin:0; padding:0; }
+em { font-style:normal; }
+li { list-style:none; }
+img { border:none; vertical-align:top; display:block;}
+body { font-size:13px; background:#666;font-family:"微软雅黑"; }
+
+/* menu */
+.pangEditor{
+	   width:600px;  
+	   margin:0 auto;
+	   margin-top:20px;
+	   border:1px solid #ccc;
+	   -webkit-border-radius:3px;
+	   -moz-border-radius:3px;
+	   border-radius:5px;   
+}
+.pangEditor .toolbar{
+	    height:40px;
+		background:#999;
+		border-bottom:1px solid #ccc;	
+}
+.pangEditor .toolbar ul{
+	    padding:0 0 0 10px;
+}
+.pangEditor .toolbar li{
+	   height:40px;
+	   display:inline-block;
+	   margin-left:25px;
+	   text-align:center;
+	   line-height:40px;
+	   font-weight:bold;
+}
+.pangEditor .toolbar li:hover{
+	    background:#666; 
+		cursor:default;
+}
+.pangEditor .toolbar .blue:hover{
+	    background:skyblue; 
+		cursor:default;
+}
+/*public*/	 
+.editor{	
+      height:170px;	 
+	  -webkit-box-shadow:inset 0 1px 1px #ddd;
+	  -moz-box-shadow:inset 0 1px 1px #ddd;
+	  box-shadow:inset 0 1px 1px #ddd; 
+	  padding:10px 10px 10px 10px;
+	  color:lightgrey;
+	  word-break:break-all;  	
+      /*  word-wrap:break-word; */	
+      overflow:auto;		 
+} 
+ 
+/*text*/ 
+.pangEditor .editorFiled:empty::before{
+          color:#999;
+          content:attr(placeholder);
+}
+.pangEditor .editorFiled:focus::before{    
+          content:none;
+}
+/*table*/ 
+.pangEditor .editorTable:empty::before{
+          color:#999;
+          content:attr(placeholder);
+}
+.pangEditor .editorTable:focus::before{    
+          content:none;
+}
+/*paint*/ 	
+.pangEditor .editorPaint:empty::before{
+          color:#999;
+          content:attr(placeholder);
+}
+.pangEditor .editorPaint:focus::before{    
+          content:none;
+}
+
+.penCursor{
+	width:18px;
+	height:18px;
+	position:absolute;
+	background:url(../img/pen.png);
+	
+}
+.penCursor:hover{
+	cursor:default;
+}
+.oPaintStyle{
+	width:5px; 
+	height:5px;
+	position:absolute;
+	background:black;
+}
+	 
