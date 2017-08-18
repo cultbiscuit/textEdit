@@ -78,6 +78,7 @@ function main(){
        //表格事件
 	 function creatTable(){
 	  	 oCreateTable.addEventListener('click',function(){
+			    oEditTable.innerHTML=''; 
             	   	var oWrap=document.createElement("div");
 	         	    oEditTable.appendChild(oWrap);
 	      		var table=new Table(oWrap);
@@ -90,7 +91,8 @@ function main(){
 	   	}
       //画图事件
         function paint(){
-        	oPaint.addEventListener('click',function(){      
+        	oPaint.addEventListener('click',function(){   
+			   oEditPaint.innerHTML=''; 
 		       var penCursor=document.createElement('penCursor');
 			   penCursor.className="penCursor";
 			   penCursor.setAttribute('draggable',false);
