@@ -1,7 +1,9 @@
 # 一个简易的文本编辑器
 
-## 对JS知识的综合应用，扎实一下自己的JS基础。[点击预览]( https://cultbiscuit.github.io/textEdit/)
+## 对JS知识的综合应用，扎实JS基础。[点击预览]( https://cultbiscuit.github.io/textEdit/)（建议谷歌里预览器预览）
 
 1.可以对编辑文字进行简单操作
+
 2.可以按用户需求生成表格
+
 3.画图（只是简单的利用拖拽实现画画，很初级很鸡肋）
