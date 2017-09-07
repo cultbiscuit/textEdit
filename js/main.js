@@ -33,33 +33,39 @@ function main(){
 			 oEditTable.innerHTML=''; 
 			  });
 		}			
-	function bold(){
-		 oBold.addEventListener('click',function(){
-			changeStyle(oEditValue,{fontWeight:'bold'}); 
-			oBold.addEventListener('click',function(){
-					changeStyle(oEditValue,{fontWeight:'normal'}); 
-					return bold();							 
-					});				
-			});
+	function bold(){   
+		 var m=1;
+              	oBold.addEventListener('click',function(){
+                         if(m){
+				changeStyle(oEditValue,{fontWeight:'bold'});
+				m=0;
+			 }else{
+				changeStyle(oEditValue,{fontWeight:'normal'});
+				m=1;
+			 }});
 		}
 	function italic(){   
-		 oItalics.addEventListener('click',function(){
-			changeStyle(oEditValue,{fontStyle:'italic'});   
-			oItalics.addEventListener('click',function(){
-					changeStyle(oEditValue,{fontStyle:'normal'});  
-					return italic();
-					});	
-			});
-		}
+		var m=1;
+              	oItalics.addEventListener('click',function(){
+                         if(m){
+				changeStyle(oEditValue,{fontStyle:'italic'}); 
+				m=0;
+			 }else{
+				 changeStyle(oEditValue,{fontStyle:'normal'}); 
+				 m=1;
+			 }});
+		}		
 	function font(){
-		 oFontFamily.addEventListener('click',function(){
-			changeStyle(oEditValue,{fontFamily:'黑体'});
-			oFontFamily.addEventListener('click',function(){
-					changeStyle(oEditValue,{fontFamily:'微软雅黑'})
-					return font();
-					});	
-			});
-		}  
+		var m=1;
+		oFontFamily.addEventListener('click',function(){
+                         if(m){
+				changeStyle(oEditValue,{fontFamily:'黑体'}); 
+				m=0;
+			 }else{
+				 changeStyle(oEditValue,{fontFamily:'微软雅黑'}); 
+				 m=1;
+			 }});
+		}
 	function left(){		
 		oLeft.addEventListener('click',function(){
 			changeStyle(oEditValue,{textAlign:'left'})
